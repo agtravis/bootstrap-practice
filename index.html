@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Bootstrap tests</title>
+  </head>
+  <body>
+
+    <!-- Header -->
+    <div class="jumbotron" style="margin-bottom: 0px;">
+        <h1>Header Text</h1>
+        <p>Paragraph text</p>
+    </div>
+
+    <!-- Navbar - set to respond at smallest screen size only, below SM, sticky-top = below header -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+
+        <!-- Button only appears in SM @media, on click displays the "#id" -->
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <!-- Icon from bootstrap -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Div autocollapsed on SM, this is the ID -->
+        <div class="collapse navbar-collapse" id="collapse_target">
+
+            <!-- navbar-brand = logo, navbar-text = logo adjacent text-->
+            <a class="navbar-brand" href="#"><img src="C:\Users\wewer\Desktop\Coding\studysite\images\Smiling_Face_Emoji_large.png" width="45px"></a>
+            <span class="navbar-text">navbar-text</span>
+
+            <!-- Links in navbar -->
+            <ul class="navbar-nav">
+
+                <!-- This item is a dropdown list of more 'sub' links -->
+                <li class="nav-item dropdown">
+
+                    <!-- link is blank ("#"), 'caret' is arrow for visuals -->
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">Dropdown<span class="caret"></span></a>
+                    
+                    <!-- This is the contents of the drop down list -->
+                    <div class="dropdown-menu" aria-labelledby="dropdown_target">
+
+                        <!-- Remove these <ul></ul> tags for vertical list -->
+                        <ul class="navbar-nav">    
+                            <a class="dropdown-item">Link A</a>
+                            <!-- visual aid/aesthetic -->
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item">Link B</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item">Link C</a>
+                        </ul>
+                    </div>                    
+                </li>
+
+                <!-- Other 'non-dropdown' links -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- responsive equal sizes -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <h4>Column 1</h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris ligula, mollis nec suscipit
+            </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <h4>Column 2</h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris ligula, mollis nec suscipit
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <h4>Column 3</h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris ligula, mollis nec suscipit
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <h4>Column 4</h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris ligula, mollis nec suscipit
+            </div>
+        </div>
+    </div>
+
+    <!-- responsive different sizes, hide/show -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-12">
+                <h4><a href="#col1Content" data-toggle="collapse">Column1</a></h4>
+                <!-- "show" class shows by default, on open -->
+                <div id="col1Content" class="collapse show">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris ligula, mollis nec suscipit <br> col-lg-2 col-md-2 col-sm-4 col-xs-12
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-8 col-12">
+                <h4><a href="#col2Content" data-toggle="collapse">Column2</a></h4>
+                <div id="col2Content" class="collapse">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris ligula, mollis nec suscipit <br> col-lg-4 col-md-4 col-sm-8 col-xs-12
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <h4><a href="#col3Content" data-toggle="collapse">Column3</a></h4>
+                <div id="col3Content" class="collapse">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris ligula, mollis nec suscipit <br> col-lg-6 col-md-6 col-sm-12 col-xs-12
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <br><br>
+
+    <div class="container">
+        <!-- <div class="row"> -->
+            <p>Hidden only on [size]:</p>
+            <div class="d-none d-sm-block">
+                <p>1. Size is NOT COL/XS</p>
+            </div>
+            <div class="d-sm-none d-md-block">
+                <p>2. Size is NOT SM</p>
+            </div>
+            <div class="d-md-none d-lg-block">
+                <p>3. Size is NOT MD</p>
+            </div> 
+            <div class="d-lg-none d-xl-block">
+                <p>4. Size is NOT LG</p>
+            </div> 
+            <div class="d-xl-none">
+                <p>5. Size is NOT XL</p>
+            </div> 
+            <br><br>
+            <p>Visible only on [size]:</p>
+            <div class="d-block d-sm-none">
+                <p>1. Size is COL/XS</p>
+            </div> 
+            <div class="d-none d-sm-block d-md-none">
+                <p>2. Size is SM</p>
+            </div> 
+            <div class="d-none d-md-block d-lg-none">
+                <p>3. Size is MD</p>
+            </div>  
+            <div class="d-none d-lg-block d-xl-none">
+                <p>4. Size is LG</p>
+            </div>  
+            <div class="d-none d-xl-block">
+                <p>5. Size is XL</p>
+            </div> 
+            <br><br>
+
+            <p>Hidden until screen size larger than [size] (No text on COL/XS):</p>              
+            <div class="d-none d-sm-block">
+                <p>1. Size is larger than COL/XS</p>
+            </div>              
+            <div class="d-none d-md-block">
+                <p>2. Size is larger than SM</p>
+            </div>              
+            <div class="d-none d-lg-block">
+                <p>3. Size is larger than MD</p>
+            </div>              
+            <div class="d-none d-xl-block">
+                <p>4. Size is larger than LG</p>
+            </div>
+            <br><br>
+            
+            <p>Hidden until screen size smaller than [size]:</p>
+            <div class="d-block d-sm-none">
+                <p>1. Size is smaller than SM</p>
+            </div>
+            <div class="d-block d-md-none">
+                <p>2. Size is smaller than MD</p>
+            </div>
+            <div class="d-block d-lg-none">
+                <p>3. Size is smaller than LG</p>
+            </div>
+            <div class="d-block d-xl-none">
+                <p>4. Size is smaller than XL</p>
+            </div>
+        <!-- </div> -->
+    </div>
+
+
+    
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
